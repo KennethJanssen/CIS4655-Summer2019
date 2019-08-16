@@ -8,12 +8,34 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+    .img-fluid {
+  max-width: 100%;
+  height: auto;
+  }
+  </style>
+
 </head>
 <body>
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-4 bg-success"><!-- The first column displays text that contains one h1 header and formatted text. -->
+      <div class="col-md-4 bg-success rounded shadow-sm p-3"><!-- The first column displays text that contains one h1 header and formatted text. -->
         <p class="h1">Paragraph tag but using the H1 Bootstrap heading class</p>
         <br/>
         <h1>Standard H1 Heading</h1>
@@ -35,7 +57,7 @@
           <li>Eget porttitor lorem</li>
         </ul>
       </div>
-      <div class="col-md-4 bg-warning"> <!-- The second column contains a form with at least 2 button styles. -->
+      <div class="col-md-4 bg-warning rounded shadow-sm p-3"> <!-- The second column contains a form with at least 2 button styles. -->
         <form action="/action_page.php" class="was-validated">
         <div class="form-group">
           <label for="uname">Username:</label>
@@ -60,9 +82,9 @@
         <button type="clear" class="btn btn-danger">Clear</button>
       </form>
       </div>
-      <div class="col-md-4 bg-success"><!-- The third column contains a responsive image of your choice that resizes as the browser window size changes -->
+      <div class="col-md-4 bg-primary rounded shadow-sm p-3 d-flex"><!-- The third column contains a responsive image of your choice that resizes as the browser window size changes -->
         <!-- <h1>Responsive Image</h1> -->
-        <img class="mx-auto d-block img-fluid" src="https://www.rasmussen.edu/assets/img/flag-vetconnect.jpg" alt="American Flag Image">
+        <img class="img-fluid mx-auto d-block img-thumbnail" width=100% height=100% src="https://www.rasmussen.edu/assets/img/flag-vetconnect.jpg" alt="American Flag Image">
       </div>
     </div>
   </div>
