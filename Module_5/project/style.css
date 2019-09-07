@@ -1105,3 +1105,7 @@ header .navbar .cta-btn a:hover {
   max-height: 768px;
   min-width: auto;
 }
+
+.form-group >[class*="col-"] + .ws-errorbox {
+    padding: 0 15px;
+}

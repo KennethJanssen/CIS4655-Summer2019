@@ -23,6 +23,7 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="style.css">
+
   </head>
 
 <body class="bg-light">
@@ -102,7 +103,7 @@
           <div class="form-group">
             <label for="ramenStyle">Style</label>
             <select name="ramenStyle" class="form-control" required>
-              <option selected></option>
+              <option></option>
               <option value="shoyu">Shoyu (Soy)</option>
               <option value="miso">Miso</option>
               <option value="shio">Shio</option>
@@ -115,29 +116,29 @@
           <!-- Radio Rating -->
           <div class="form-group" name="exampleRadios">
             <label for="rating">Rating:</label>
-            <div class="form-check" name="exampleRadios">
+            <div class="form-check" name="exampleRadios" required>
               <label class="form-check-label" for="exampleRadios1">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">1 Star
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>1 Star
               </label>
             </div>
             <div class="form-check">
               <label class="form-check-label" for="exampleRadios2">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">2 Star
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" required>2 Star
               </label>
             </div>
             <div class="form-check">
               <label class="form-check-label" for="exampleRadios3">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">3 Star
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" required>3 Star
               </label>
             </div>
             <div class="form-check">
               <label class="form-check-label" for="exampleRadios4">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">4 Star
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" required>4 Star
               </label>
             </div>
             <div class="form-check">
               <label class="form-check-label" for="exampleRadios5">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">5 Star
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5" required>5 Star
               </label>
             </div>
             <div class="valid-feedback">Valid.</div>
@@ -159,12 +160,12 @@
           </div>
 
           <!-- Agreement -->
-          <div class="form-group was-validated">
-            <input class="control-input" type="checkbox" name="agreeCHK" id="agreeCHK" required>
-            <label class="form-check-label" for="agreeCHK"> I agree this is my own opinion.</label>
-            <div class="invalid-feedback">Check this checkbox to continue.</div>
+          <div class="form-check ml-4">
+            <input class="form-check-input" type="checkbox" name="agreement"  value="" id="agreementCheck1" required>
+            <label class="form-check-label"  for="agreementCheck1">I agree this is my own opinion.</label>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please add some comments.</div>
           </div>
-
 
           <!-- Submit Button -->
           <button type="submit" class="btn btn-primary">Submit</button>
@@ -186,7 +187,26 @@
   <!-- Placed at the end of the document so the pages load faster -->
 
   <!-- Custom Javascript contains validation script -->
-  <script src="custom.js"></script>
+  <script>
+    // Disable form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Get the forms we want to add validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

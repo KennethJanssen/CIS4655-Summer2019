@@ -15,9 +15,3 @@ form.classList.add('was-validated');
 });
 }, false);
 })();
-
-$(document).ready(function() {
-$('.mdb-select').materialSelect();
-$('.mdb-select.select-wrapper .select-dropdown').val("").removeAttr('readonly').attr("placeholder",
-"Choose your country ").prop('required', true).addClass('form-control').css('background-color', '#fff');
-});
