@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)recipes.html -->
+<html lang="en" class="gr__technext_github_io">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Ramen Rater</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <!-- Fancy Power Point like transition effects -->
+    <link rel="stylesheet" href="animate.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+<body class="bg-light">
+  <header role="banner">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="text-shadow: 2px 2px 4px #000000;">
+      <div class="container">
+        <a class="navbar-brand ml-3 font-weight-bold" href="index.html">Ramen Rater</a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ratings.html">Ratings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="random.html">Random Ramen</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+  </header>
+  <!-- END header -->
+
+  <div id="myCarousel" class="carousel slide shadow-lg" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="first-slide w-100" src="./img/ratings.jpg" style="max-height: 768px;" alt="First slide">
+        <div class="container" style="text-shadow: 2px 2px 4px #000000;">
+          <div class="carousel-caption text-left d-none d-sm-block d-md-block">
+            <h1 class="text-white d-none d-md-block d-lg-block d-xl-block">Submit Your Ramen Review</h1>
+            <p class="d-none d-lg-block d-xl-block">Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+              Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- END header -->
+
+  <main role="main" class="element-animate fadeInUp element-animated no-gutters">
+    <div class="d-flex align-items-center p-3 my-3 text-black-50 bg-light rounded shadow-sm">
+      <div class="container">
+        <form action="/action_page.php" class="needs-validation" novalidate>
+
+          <!-- Text Product Name -->
+          <div class="form-group">
+            <label for="pname">Product Name:</label>
+            <input type="text" class="form-control" id="pname" placeholder="Enter Name of Ramen" name="pname" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+          <!-- Text Brand Name -->
+          <div class="form-group">
+            <label for="bname">Brand Name:</label>
+            <input type="text" class="form-control" id="bname" placeholder="Enter Company Name" name="bname" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+
+          <!-- Drop down - Style -->
+          <div class="form-group">
+            <label for="ramenStyle">Style</label>
+            <select name="ramenStyle" class="form-control" required>
+              <option selected></option>
+              <option value="shoyu">Shoyu (Soy)</option>
+              <option value="miso">Miso</option>
+              <option value="shio">Shio</option>
+              <option value="tonkatsu">Tonkatsu</option>
+            </select>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please pick Ramen Style.</div>
+          </div>
+
+          <!-- Radio Rating -->
+          <div class="form-group" name="exampleRadios">
+            <label for="rating">Rating:</label>
+            <div class="form-check" name="exampleRadios">
+              <label class="form-check-label" for="exampleRadios1">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">1 Star
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="exampleRadios2">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">2 Star
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="exampleRadios3">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">3 Star
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="exampleRadios4">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">4 Star
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="exampleRadios5">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">5 Star
+              </label>
+            </div>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please pick Ramen Style.</div>
+          </div>
+
+          <!-- Text Area - Comments -->
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Enter Review Comments</label>
+            <textarea class="form-control" id="comments" rows="3" required></textarea>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please add some comments.</div>
+          </div>
+
+          <!-- Picture -->
+          <div class="form-group">
+            <label for="file">Attach picture (Optional)</label>
+            <input type="file" class="form-control-file border" name="file">
+          </div>
+
+          <!-- Agreement -->
+          <div class="form-group was-validated">
+            <input class="control-input" type="checkbox" name="agreeCHK" id="agreeCHK" required>
+            <label class="form-check-label" for="agreeCHK"> I agree this is my own opinion.</label>
+            <div class="invalid-feedback">Check this checkbox to continue.</div>
+          </div>
+
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-right"><a href="#">Back to top</a></p>
+      <p> [Landing Page] &copy;2017-2019 Ken Janssen, Inc. &middot;<a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+  </main>
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <!-- Custom Javascript contains validation script -->
+  <script src="custom.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+
+</html>

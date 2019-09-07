@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>test</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <form class="needs-validation container" novalidate>
+      <div class="form-row">
+        <div class="mb-3 md-form">
+          <select class="mdb-select" required>
+            <option value="1">USA</option>
+            <option value="2">Germany</option>
+            <option value="3">Poland</option>
+          </select>
+          <div class="invalid-feedback">Please select a country.</div>
+        </div>
+      </div>
+      <div class="form-row mb-4">
+        <div class="form-check pl-0">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck29" required>
+          <label class="form-check-label" for="invalidCheck29">Agree to terms and conditions</label>
+          <div class="invalid-feedback">You shall not pass!</div>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-sm btn-rounded" type="submit">Submit form</button>
+    </form>
+
+    <div class="form-group col-md-4">
+      <label class="form-control-label is-invalid" for="valuation_value">Estimated Value</label>
+      <div class="input-group is-invalid">
+        <span class="input-group-addon">£</span>
+            <div class="invalid-feedback">can't be blank, is not a number</div>
+        <input class="form-control is-invalid" min="0" type="number" value="" name="valuation[value]">
+      </div>
+          <!-- feeback right after input -->
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<!-- Custom Javascript -->
+        <script src="custom.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
