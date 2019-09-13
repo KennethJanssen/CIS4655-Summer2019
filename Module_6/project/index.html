@@ -200,8 +200,9 @@
 
 
 <script>
+Push.Permission.request();
 $(document).ready(function(){
-  $('#myBtn').click(function(){
+    $('#myBtn').click(function(){
     $('.toast').toast({delay: 10001});
     $('.toast').toast({positionClass: "md-toast-top-right"});
     $('.toast').toast('show');
@@ -210,6 +211,7 @@ $(document).ready(function(){
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+
 <script>
     Push.Permission.request();
     document.getElementById('demo-btn').onclick = function () {
