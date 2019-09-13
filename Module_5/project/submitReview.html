@@ -81,7 +81,7 @@
   <main role="main" class="element-animate fadeInUp element-animated no-gutters">
     <div class="d-flex align-items-center p-3 my-3 text-black-50 bg-light rounded shadow-sm">
       <div class="container">
-        <form action="/action_page.php" class="needs-validation" novalidate>
+        <form action="/action_page.php" class="needs-validation" id="form1" method="post" novalidate>
 
           <!-- Text Product Name -->
           <div class="form-group">
@@ -169,11 +169,13 @@
 
           <!-- Submit Button -->
           <button type="submit" class="btn btn-primary">Submit</button>
+
+
+          <input type="submit" class="button4" value="Place Order" >
+
         </form>
       </div>
     </div>
-
-
 
     <!-- FOOTER -->
     <footer class="container">
@@ -187,26 +189,7 @@
   <!-- Placed at the end of the document so the pages load faster -->
 
   <!-- Custom Javascript contains validation script -->
-  <script>
-    // Disable form submissions if there are invalid fields
-    (function() {
-      'use strict';
-      window.addEventListener('load', function() {
-        // Get the forms we want to add validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function(form) {
-          form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
-  </script>
+  <script src="custom.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
