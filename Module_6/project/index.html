@@ -9,6 +9,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+  <!-- Fancy Power Point like transition effects -->
+  <link rel="stylesheet" href="animate.css">
+
   <!-- Theme Style -->
   <link rel="stylesheet" href="style.css">
 
@@ -120,8 +126,9 @@
     <div class="container mt-3">
       <h3>Notifications</h3>
       <p>The <strong>delay</strong> egestas eget quam. Donec id elit non mi porta gravida</p>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-      <button type="button" class="btn btn-primary" id="myBtn">Show Toast</button>
+      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      <button class="btn btn-primary" id="myBtn">Show Toast</button>
+      <button class="btn btn-primary" id="demo-btn">Show notification</button>
 </div>
 
 <!-- Three columns of text below the carousel -->
@@ -148,73 +155,28 @@
   </div><!-- /.col-lg-4 -->
 </div><!-- /.row -->
 
-<!-- START THE FEATURETTES -->
-
-<hr class="featurette-divider">
-
-<div class="row featurette">
-  <div class="col-md-7">
-    <h2 class="featurette-heading">Try Tonkatsu today!<span class="text-muted">It'll blow your mind.</span></h2>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-  <div class="col-md-5">
-    <img class="featurette-image img-fluid mx-auto block" src="./img/dishes_2.jpg" alt="Generic placeholder image">
-  </div>
-</div>
-
-<hr class="featurette-divider">
-
-<div class="row featurette">
-  <div class="col-md-7 order-md-2">
-    <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-  <div class="col-md-5 order-md-1">
-    <img class="featurette-image img-fluid mx-auto" src="./img/dishes_4.jpg" alt="Generic placeholder image">
-  </div>
-</div>
-
-<hr class="featurette-divider">
-
-<div class="row featurette">
-  <div class="col-md-7">
-    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-  </div>
-  <div class="col-md-5">
-    <img class="featurette-image img-fluid mx-auto" src="./img/dishes_3.jpg" alt="Generic placeholder image">
-  </div>
-</div>
-
-<hr class="featurette-divider">
-
-<!-- /END THE FEATURETTES -->
-
-
 <!-- FOOTER -->
 <footer class="container">
   <p class="float-right"><a href="#">Back to top</a></p>
   <p> [Landing Page] &copy;2017-2019 Ken Janssen, Inc. &middot;<a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
 </footer>
-</body>
+
 
 
 <script>
-Push.Permission.request();
 $(document).ready(function(){
     $('#myBtn').click(function(){
     $('.toast').toast({delay: 10001});
-    $('.toast').toast({positionClass: "md-toast-top-right"});
     $('.toast').toast('show');
   });
 });
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js"></script>
 
 <script>
     Push.Permission.request();
-    document.getElementById('demo-btn').onclick = function () {
+    document.getElementById('mybtn').onclick = function () {
         Push.create('Hi there!', {
             body: 'This is a notification.',
             icon: 'icon.png',
@@ -227,6 +189,5 @@ $(document).ready(function(){
         });
     };
 </script>
-
-
+</body>
 </html>
